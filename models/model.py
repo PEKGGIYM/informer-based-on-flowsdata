@@ -13,7 +13,7 @@ class Informer(nn.Module):
                 factor=5, d_model=128, n_heads=4, e_layers=2, d_layers=1, d_ff=256, 
                 dropout=0.1, attn='prob', embed='fixed', freq='h', activation='gelu', 
                 output_attention = False, distil=True, mix=True,
-                device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')):
+                device=torch.device('cuda:0')):
         super(Informer, self).__init__()
         self.pred_len = out_len
         self.attn = attn
@@ -86,7 +86,7 @@ class InformerStack(nn.Module):
                 factor=5, d_model=128, n_heads=2, e_layers=[2,1], d_layers=1, d_ff=256, 
                 dropout=0.1, attn='prob', embed='fixed', freq='h', activation='gelu',
                 output_attention = False, distil=True, mix=True,
-                device=torch.device('cuda:0'if torch.cuda.is_availavle() else "cpu")):
+                device=torch.device('cuda:0')):
         super(InformerStack, self).__init__()
         self.pred_len = out_len
         self.attn = attn
