@@ -62,8 +62,8 @@ class Exp_Informer(Exp_Basic):
         args = self.args
 
         data_dict = {
-            '前五行_客户端':Dataset_ClientTraffic5,
-            '前五行_服务器':Dataset_ServerTraffic5,
+            '前五行_客户端':Dataset_5ClientTraffic,
+            '前五行_服务器':Dataset_5ServerTraffic,
             'ETTm1':Dataset_ETT_minute,
             'ETTm2':Dataset_ETT_minute,
             'WTH':Dataset_Custom,
